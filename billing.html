@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Billing & Plans — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <span class="eyebrow">Billing</span>
+  <h1 class="section-title" style="font-size:26px">Billing & Plans</h1>
+  <p style="color:var(--ink-soft); margin-top:6px">Manage your SkillBridge plan, usage and billing information.</p>
+
+  <div class="card" style="margin-top:22px">
+    <div class="card-row">
+      <div>
+        <div style="font-size:12.5px; color:var(--ink-soft)">Current Plan</div>
+        <h2 id="currentPlanName" style="font-size:22px; margin-top:4px">Free Plan</h2>
+      </div>
+      <span class="badge badge-teal" id="currentPlanStatus">Active</span>
+    </div>
+    <div style="margin-top:12px; font-size:13px; color:var(--ink-soft)" id="planDates"></div>
+    <div id="currentPlanFeatures" style="margin-top:14px"></div>
+  </div>
+
+  <h3 style="margin-top:28px; font-size:15px">Available Plans</h3>
+  <div class="quick-actions" id="planCards" style="grid-template-columns:repeat(4,1fr)"></div>
+
+  <div class="card" style="margin-top:24px">
+    <h3 style="font-size:15px">Usage</h3>
+    <div class="stat-grid" id="usageGrid" style="grid-template-columns:repeat(3,1fr); margin-top:14px">
+      <div class="stat-card"><div class="num" id="usageSaved">0</div><div class="lbl">Saved Opportunities</div></div>
+      <div class="stat-card"><div class="num" id="usageCampaigns">0</div><div class="lbl">Campaigns</div></div>
+      <div class="stat-card"><div class="num" id="usageOutreach">0</div><div class="lbl">Outreach Contacts</div></div>
+    </div>
+    <p style="font-size:12.5px; color:var(--ink-soft); margin-top:14px">Usage limits will be introduced with paid plans.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="font-size:15px">Billing History</h3>
+    <div id="billingHistory" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="font-size:15px">Invoices</h3>
+    <div id="invoicesSection" style="margin-top:10px"></div>
+  </div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/billing.js"></script>
+</body>
+</html>
