@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Opportunities — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <span class="eyebrow">Opportunity Intelligence</span>
+  <div class="card-row">
+    <h1 class="section-title" style="font-size:26px">Opportunities</h1>
+    <a href="saved-opportunities.html" class="btn btn-outline btn-sm">View Saved →</a>
+  </div>
+  <p style="color:var(--ink-soft); margin-top:6px">Researched potential opportunities matched to your requirements. Not guaranteed clients.</p>
+
+  <div class="filters-bar">
+    <input type="search" id="fSearch" placeholder="Search company, title, industry…">
+    <select id="fIndustry"><option value="">All industries</option></select>
+    <select id="fCountry"><option value="">All countries</option></select>
+    <select id="fCity"><option value="">All cities</option></select>
+    <select id="fScore">
+      <option value="">Any score</option>
+      <option value="80">80+</option>
+      <option value="60">60+</option>
+      <option value="40">40+</option>
+    </select>
+    <select id="fSort">
+      <option value="newest">Newest first</option>
+      <option value="score">Highest score</option>
+    </select>
+  </div>
+
+  <div id="oppResults"></div>
+  <div class="pagination" id="pagination" style="display:none"></div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/opportunities.js"></script>
+</body>
+</html>
