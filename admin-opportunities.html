@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin — Opportunities — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <span class="eyebrow">Admin</span>
+  <h1 class="section-title" style="font-size:26px">Manage Opportunities</h1>
+  <p style="color:var(--ink-soft); margin-top:6px">Create, edit, and archive the opportunities catalog. Visible only to admins — enforced by database row-level security, not just this page.</p>
+
+  <div class="filters-bar">
+    <input type="search" id="aSearch" placeholder="Search by company name…">
+    <select id="aReviewStatus">
+      <option value="">All review statuses</option>
+      <option value="PENDING_REVIEW">Pending review</option>
+      <option value="APPROVED">Approved</option>
+      <option value="REJECTED">Rejected</option>
+      <option value="ARCHIVED">Archived</option>
+    </select>
+    <button class="btn btn-primary btn-sm" id="newOppBtn">+ New Opportunity</button>
+  </div>
+
+  <div id="adminResults"></div>
+  <div class="pagination" id="pagination" style="display:none"></div>
+
+  <div id="oppFormModal" style="display:none; position:fixed; inset:0; background:rgba(16,20,31,.5); z-index:60; align-items:center; justify-content:center">
+    <div class="card" style="max-width:560px; width:92%; max-height:88vh; overflow-y:auto; background:#fff">
+      <div class="card-row">
+        <h3 id="formTitle" style="font-size:16px">New Opportunity</h3>
+        <button id="closeModalBtn" class="btn btn-outline btn-sm">Close</button>
+      </div>
+      <form id="oppForm">
+        <input type="hidden" id="oppId">
+        <div class="field"><label>Title</label><input type="text" id="fTitle" required></div>
+        <div class="field"><label>Company name</label><input type="text" id="fCompany" required></div>
+        <div class="field"><label>Company website</label><input type="url" id="fWebsite"></div>
+        <div class="field"><label>Industry</label><input type="text" id="fIndustry"></div>
+        <div class="field"><label>Country</label><input type="text" id="fCountry"></div>
+        <div class="field"><label>City</label><input type="text" id="fCity"></div>
+        <div class="field"><label>Description</label><textarea id="fDescription"></textarea></div>
+        <div class="field"><label>Potential need</label><textarea id="fNeed"></textarea></div>
+        <div class="field"><label>Why relevant</label><textarea id="fRelevant"></textarea></div>
+        <div class="field"><label>Suggested approach</label><textarea id="fApproach"></textarea></div>
+        <div class="field"><label>Source URL</label><input type="url" id="fSource"></div>
+        <div class="field"><label>Opportunity score (0–100)</label><input type="number" id="fScore" min="0" max="100"></div>
+        <div class="field">
+          <label>Status</label>
+          <select id="fStatus"><option value="ACTIVE">ACTIVE</option><option value="DRAFT">DRAFT</option><option value="ARCHIVED">ARCHIVED</option></select>
+        </div>
+        <div class="field">
+          <label>Review status</label>
+          <select id="fReviewStatus"><option value="APPROVED">APPROVED</option><option value="PENDING_REVIEW">PENDING_REVIEW</option><option value="REJECTED">REJECTED</option><option value="ARCHIVED">ARCHIVED</option></select>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%; margin-top:18px" id="formSubmitBtn">Save</button>
+        <div class="alert" id="formAlert"></div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/admin-opportunities.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Overview — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <span class="eyebrow">Admin</span>
+  <h1 class="section-title" style="font-size:26px">Platform Overview</h1>
+  <p style="color:var(--ink-soft); margin-top:6px">Real-time platform statistics. Visible only to admins.</p>
+
+  <div class="stat-grid" id="platformStats">
+    <div class="stat-card"><div class="num" id="stUsers">0</div><div class="lbl">Total Users</div></div>
+    <div class="stat-card"><div class="num" id="stActiveUsers">0</div><div class="lbl">Active Users</div></div>
+    <div class="stat-card"><div class="num" id="stOpps">0</div><div class="lbl">Total Opportunities</div></div>
+    <div class="stat-card"><div class="num" id="stSavedOpps">0</div><div class="lbl">Saved Opportunities</div></div>
+    <div class="stat-card"><div class="num" id="stCampaigns">0</div><div class="lbl">Total Campaigns</div></div>
+    <div class="stat-card"><div class="num" id="stActiveCampaigns">0</div><div class="lbl">Active Campaigns</div></div>
+    <div class="stat-card"><div class="num" id="stOutreach">0</div><div class="lbl">Outreach Contacts</div></div>
+    <div class="stat-card"><div class="num" id="stInterested">0</div><div class="lbl">Interested Opportunities</div></div>
+  </div>
+
+  <div class="card" style="margin-top:22px">
+    <h3 style="font-size:15px">Revenue</h3>
+    <p style="font-size:13.5px; color:var(--ink-soft); margin-top:8px" id="revenueNote">Revenue data unavailable — payments not connected.</p>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="card-row">
+      <h3 style="font-size:15px">New users over time</h3>
+      <select id="trendRange">
+        <option value="7d">Last 7 days</option>
+        <option value="30d" selected>Last 30 days</option>
+        <option value="90d">Last 90 days</option>
+      </select>
+    </div>
+    <div id="signupTrend" style="margin-top:16px"></div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3 style="font-size:15px">Plan distribution</h3>
+    <div id="planDistribution" style="margin-top:12px"></div>
+  </div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/admin.js"></script>
+</body>
+</html>
