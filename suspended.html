@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Account Suspended — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/auth.css">
+</head>
+<body>
+
+<header class="auth-header">
+  <a href="index.html" class="auth-brand"><span class="skill">Skill</span><span class="bridge">Bridge</span></a>
+</header>
+
+<main class="auth-main">
+  <div class="auth-card">
+    <h1>Account suspended</h1>
+    <p class="auth-sub">Your SkillBridge account has been suspended. If you believe this is a mistake, please contact <a href="mailto:hello.manavlab@gmail.com" style="color:var(--teal); font-weight:600">hello.manavlab@gmail.com</a>.</p>
+    <button class="auth-btn" id="logoutBtn" style="margin-top:24px">
+      <span class="btn-text">Log Out</span>
+    </button>
+  </div>
+</main>
+
+<footer class="auth-page-footer">© 2026 SkillBridge — Powered by ManavLab</footer>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module">
+  import { logOutUser } from "./src/auth.js";
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await logOutUser();
+    window.location.replace("login.html");
+  });
+</script>
+</body>
+</html>

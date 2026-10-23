@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Campaign — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <a href="campaigns.html" style="font-size:13px; font-weight:600; color:var(--ink-soft)">← Back to Campaigns</a>
+  <h1 class="section-title" style="font-size:26px; margin-top:12px">Create Campaign</h1>
+
+  <div class="card" style="margin-top:18px; max-width:720px">
+    <form id="campaignForm">
+      <div class="field"><label for="cName">Campaign name *</label><input type="text" id="cName" required></div>
+      <div class="field"><label for="cDescription">Description</label><textarea id="cDescription"></textarea></div>
+      <div class="field">
+        <label for="cChannel">Channel</label>
+        <select id="cChannel"><option value="EMAIL">Email</option><option value="LINKEDIN">LinkedIn</option><option value="WHATSAPP">WhatsApp</option><option value="MULTI_CHANNEL">Multi-channel</option></select>
+      </div>
+
+      <div class="field">
+        <label>Select opportunities <span id="selectedCount" style="color:var(--teal); font-weight:700">(0 selected)</span></label>
+        <input type="search" id="oppSearch" placeholder="Search your saved opportunities…" style="margin-bottom:8px">
+        <div id="oppPicker" style="max-height:320px; overflow-y:auto"></div>
+      </div>
+
+      <div style="display:flex; gap:10px; margin-top:22px">
+        <button type="submit" data-status="DRAFT" class="btn btn-outline" style="flex:1">Save Draft</button>
+        <button type="submit" data-status="READY" class="btn btn-primary" style="flex:1">Create Campaign</button>
+      </div>
+      <a href="campaigns.html" class="btn btn-outline" style="width:100%; margin-top:10px; justify-content:center">Cancel</a>
+      <div class="alert" id="formAlert"></div>
+    </form>
+  </div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/campaign-new.js"></script>
+</body>
+</html>
