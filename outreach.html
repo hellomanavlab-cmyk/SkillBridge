@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Outreach Agent — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <div class="card-row">
+    <div>
+      <span class="eyebrow">SkillBridge Outreach Agent</span>
+      <h1 class="section-title" style="font-size:26px">Prepare, manage and monitor your outreach</h1>
+      <p style="color:var(--ink-soft); margin-top:6px">Prepare, manage and monitor your outreach campaigns from one place.</p>
+    </div>
+    <span class="badge badge-amber">Automation Status: Coming Soon</span>
+  </div>
+
+  <div class="stat-grid" id="outreachStats">
+    <div class="stat-card"><div class="num" id="stTotalCampaigns">0</div><div class="lbl">Total Campaigns</div></div>
+    <div class="stat-card"><div class="num" id="stReadyCampaigns">0</div><div class="lbl">Ready Campaigns</div></div>
+    <div class="stat-card"><div class="num" id="stContactsToReach">0</div><div class="lbl">Contacts to Reach</div></div>
+    <div class="stat-card"><div class="num" id="stFollowUps">0</div><div class="lbl">Follow-ups Due</div></div>
+    <div class="stat-card"><div class="num" id="stReplies">0</div><div class="lbl">Replies</div></div>
+    <div class="stat-card"><div class="num" id="stInterested">0</div><div class="lbl">Interested</div></div>
+  </div>
+
+  <div class="tabs" id="tabs">
+    <button class="tab-btn active" data-tab="prepare">Prepare</button>
+    <button class="tab-btn" data-tab="preview">Message Preview</button>
+    <button class="tab-btn" data-tab="settings">Settings</button>
+  </div>
+
+  <div id="tabPrepare" class="tab-panel">
+    <div class="card" style="margin-top:18px">
+      <h3 style="font-size:15px">Select a campaign</h3>
+      <div id="campaignPicker" style="margin-top:12px"></div>
+    </div>
+    <div class="card" style="margin-top:16px">
+      <div class="card-row">
+        <h3 style="font-size:15px">Opportunities in this campaign</h3>
+      </div>
+      <div id="prepOppList" style="margin-top:12px"></div>
+    </div>
+  </div>
+
+  <div id="tabPreview" class="tab-panel" style="display:none">
+    <div class="card" style="margin-top:18px">
+      <p class="alert alert-info show">Message preview only — nothing will be sent.</p>
+      <div id="previewList"></div>
+    </div>
+  </div>
+
+  <div id="tabSettings" class="tab-panel" style="display:none">
+    <div class="card" style="margin-top:18px; max-width:560px">
+      <h3 style="font-size:15px">Primary channel</h3>
+      <select id="settingsChannel" style="margin-top:10px">
+        <option value="EMAIL">Email</option>
+        <option value="LINKEDIN">LinkedIn</option>
+        <option value="WHATSAPP">WhatsApp</option>
+      </select>
+
+      <h3 style="font-size:15px; margin-top:22px">Follow-up schedule</h3>
+      <div class="field"><label>Initial outreach — day</label><input type="number" id="dayInitial" min="0"></div>
+      <div class="field"><label>Follow-up 1 — day</label><input type="number" id="dayF1" min="0"></div>
+      <div class="field"><label>Follow-up 2 — day</label><input type="number" id="dayF2" min="0"></div>
+      <div class="field"><label>Follow-up 3 — day</label><input type="number" id="dayF3" min="0"></div>
+
+      <p style="font-size:12.5px; color:var(--ink-soft); margin-top:14px">This schedule will become active only once the Outreach Agent sending system is implemented. For now it's saved as a preference on this device.</p>
+      <button class="btn btn-primary" id="saveSettingsBtn" style="margin-top:10px">Save Settings</button>
+      <div class="alert" id="settingsAlert"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/outreach.js"></script>
+</body>
+</html>

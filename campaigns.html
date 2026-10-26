@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campaigns — SkillBridge</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/styles/app.css">
+</head>
+<body>
+
+<div id="page-content">
+  <div class="card-row">
+    <div>
+      <span class="eyebrow">Campaigns</span>
+      <h1 class="section-title" style="font-size:26px">Campaigns</h1>
+    </div>
+    <a href="campaign-new.html" class="btn btn-primary">+ Create Campaign</a>
+  </div>
+
+  <div class="filters-bar">
+    <input type="search" id="cSearch" placeholder="Search campaigns…">
+    <select id="cStatus">
+      <option value="">All statuses</option>
+      <option>DRAFT</option><option>READY</option><option>ACTIVE</option><option>PAUSED</option><option>COMPLETED</option><option>ARCHIVED</option>
+    </select>
+    <select id="cChannel">
+      <option value="">All channels</option>
+      <option>EMAIL</option><option>LINKEDIN</option><option>WHATSAPP</option><option>MULTI_CHANNEL</option>
+    </select>
+  </div>
+
+  <div id="campaignResults"></div>
+  <div class="pagination" id="pagination" style="display:none"></div>
+</div>
+
+<script type="module" src="src/supabase-client.js"></script>
+<script type="module" src="src/pages/campaigns.js"></script>
+</body>
+</html>
