@@ -1,0 +1,30 @@
+SKILLBRIDGE PREMIUM VISUAL REFRESH
+=================================
+
+What changed
+- Added a consistent premium visual layer across the existing HTML pages.
+- Updated the repeated header logo to use the supplied SkillBridge logo asset.
+- Added the supplied lead-research funnel illustration to the home page.
+- Added the supplied founder portrait to the About Founder hero section.
+- Added a three-step Discover / Research / Deliver visual explainer.
+- Refined typography, spacing, cards, buttons, navigation, forms and footer styling.
+- Added responsive layouts for smaller screens.
+
+What was preserved
+- Existing page names and site structure.
+- Existing page copy and current displayed pricing.
+- Existing forms and their original IDs/fields.
+- Existing inline scripts and WhatsApp/email handoff behavior.
+- Existing policy pages and internal navigation destinations.
+- Existing deployment scripts (not executed).
+
+Verification performed
+- Checked local page links and local image/style/script references: no broken references found.
+- Confirmed the three existing enquiry forms remain present.
+- Confirmed no pricing text was changed by the visual refresh.
+
+Before publishing
+- Preview on mobile and desktop.
+- Test each enquiry form and WhatsApp/email handoff on a real device.
+- Confirm all commercial details and policies before making the site public.
+- This ZIP has not been deployed and does not change the live GitHub Pages site.
