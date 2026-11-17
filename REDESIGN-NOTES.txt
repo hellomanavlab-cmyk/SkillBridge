@@ -1,0 +1,34 @@
+SKILLBRIDGE PREMIUM REDESIGN — VERSION 2
+==========================================
+
+Visual direction
+- Dark cinematic visual system inspired by the supplied references.
+- Charcoal/black surfaces, restrained electric blue and violet accents.
+- Editorial display typography paired with clean sans-serif body text.
+- Spacious sections, subtle borders, refined cards and mobile layouts.
+- Homepage hero uses a custom abstract glass architecture visual.
+- Founder page uses the founder portrait supplied by the project owner.
+- Header uses the supplied SkillBridge badge and wordmark.
+
+Scope
+- Shared visual stylesheet added at assets/css/skillbridge-premium.css.
+- Applied to every HTML page in this ZIP.
+- Homepage hero and section anchors refined.
+- Existing page copy, form IDs, form fields, scripts, pricing text, policies,
+  page filenames and internal link destinations were preserved.
+- Supplied logo and founder portrait assets were installed in site/media/.
+
+Important
+- This is a static HTML/CSS redesign. It does not add backend submission,
+  automated lead verification, live AI agents, or database storage.
+- The displayed Verified Leads price remains as found in this ZIP. There is
+  a known separate policy/document pricing inconsistency that requires
+  owner review; this redesign intentionally did not resolve it.
+- External Google Fonts may fall back to system fonts if unavailable.
+- ZIP has not been deployed. Do not replace the live site until previewed
+  and the forms, links, WhatsApp/email handoffs and mobile layout are tested.
+
+Verification
+- All HTML pages received the shared stylesheet reference.
+- Local href targets and local image/style/script references were checked.
+- Existing form IDs and submit/handoff controls were preserved.
