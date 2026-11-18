@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://hellomanavlab-cmyk.github.io/SkillBridge/sitemap.xml
