@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Raw Leads — SkillBridge</title>
+<meta name="description" content="Request researched business leads. The first 10 Raw Leads are free, one time per customer/business, then ₹99 per 10 leads. Delivered privately after manual review.">
+<meta property="og:title" content="Raw Leads — SkillBridge">
+<meta property="og:description" content="Request researched business leads. The first 10 Raw Leads are free, one time per customer/business, then ₹99 per 10 leads. Delivered privately after manual review.">
+<meta property="og:url" content="https://hellomanavlab-cmyk.github.io/SkillBridge/raw-leads.html">
+<meta property="og:image" content="https://hellomanavlab-cmyk.github.io/SkillBridge/brand/logo-badge-512.png">
+<link rel="canonical" href="https://hellomanavlab-cmyk.github.io/SkillBridge/raw-leads.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/skillbridge-premium.css">
+</head>
+<body>
+<header class="top"><div class="hbar"><a href="index.html"><img src="media/skillbridge-logo.png" alt="SkillBridge logo, powered by ManavLab" width="40" height="40"><span><strong>SkillBridge</strong><small>Powered by ManavLab</small></span></a><button type="button" id="menuBtn" aria-expanded="false" aria-controls="menuPanel" aria-label="Open menu"><span></span><span></span><span></span></button></div><nav class="subnav" aria-label="Main"><a href="index.html" data-nav="index.html">Home</a><a href="raw-leads.html" data-nav="raw-leads.html" aria-current="page">Raw Leads</a><a href="verified-research-leads.html" data-nav="verified-research-leads.html">Verified Leads</a></nav><div class="menu" id="menuPanel" role="menu"><a role="menuitem" href="about-founder.html">About Founder</a><a role="menuitem" href="about-skillbridge.html">About SkillBridge</a><a role="menuitem" href="manavlab.html">ManavLab</a><a role="menuitem" href="business-analysis.html">Business Analysis (Free)</a><a role="menuitem" href="professional-connection.html">Professional Connection (Free)</a><a role="menuitem" href="policies.html">Policies</a><a role="menuitem" href="contact.html">Contact</a></div></header>
+<main class="wrap">
+
+<section class="hero"><div class="badge">Raw Leads</div><h1>Raw Leads</h1>
+<p>Researched business leads for the category and location you choose. Leads are reviewed manually and delivered privately to you. We do not publish a public lead list.</p></section>
+<div class="offer"><div class="price">First 10 leads free</div><div>Basic lead data service. The first 10 Raw Leads are free, one time per customer/business. After that, ₹99 per 10 Raw Leads. Leads are researched manually and delivered privately after review.</div></div>
+<section class="card"><h2>Request Raw Leads</h2>
+<form id="rawForm" novalidate>
+<div class="fld"><label for="rl-name">Full Name *</label><input id="rl-name" name="name" type="text" maxlength="200" ><div class="err" id="err-name"></div></div><div class="fld"><label for="rl-email">Email *</label><input id="rl-email" name="email" type="email" maxlength="200" ><div class="err" id="err-email"></div></div><div class="fld"><label for="rl-category">Industry / Business Category *</label><input id="rl-category" name="category" type="text" maxlength="200" ><div class="err" id="err-category"></div></div><div class="fld"><label for="rl-location">Target Location *</label><input id="rl-location" name="location" type="text" maxlength="200" ><div class="err" id="err-location"></div></div><div class="fld"><label for="rl-count">Number of leads required *</label><input id="rl-count" name="count" type="text" maxlength="200" inputmode="numeric" ><div class="err" id="err-count"></div></div><div class="fld"><label for="rl-extra">Additional requirements</label><textarea id="rl-extra" name="extra" maxlength="1000" ></textarea><div class="err" id="err-extra"></div></div>
+<div class="est" id="rl-est">Enter the number of leads to see the estimate.</div>
+<label class="consent"><input type="checkbox" name="consent"> I agree that SkillBridge may contact me by email or WhatsApp about this request. I understand the request is reviewed manually and nothing is confirmed until SkillBridge replies. *</label><div class="err" id="err-consent"></div>
+<div class="actions"><button class="btn" type="button" id="rawWa">Send request on WhatsApp</button><button class="btn ghost" type="button" id="rawMail">Send request by email</button></div><p class="status" id="rawStatus" role="status" aria-live="polite"></p><p class="note">Pressing a button prepares a message. It is delivered only when you press Send in WhatsApp or your email app. This website does not store your form.</p>
+</form></section>
+<section class="section"><h2>What you receive</h2><p>Leads are delivered privately after manual review. Each lead shows the business name, category, city, website and the source used, where available. Contact details are shared only where there is an appropriate legal basis or permission.</p></section>
+
+</main>
+<footer><div class="wrap"><div><strong>SkillBridge</strong> · Powered by ManavLab</div><nav class="footer-links" aria-label="Footer"><a href="policy-privacy.html">Privacy Policy</a><a href="policy-terms.html">Terms &amp; Conditions</a><a href="policies-guidelines.html">Policies &amp; Guidelines</a><a href="policy-refund.html">Refund &amp; Cancellation</a><a href="cookie-policy.html">Cookie Policy</a><a href="business-analysis.html">Business Analysis</a><a href="professional-connection.html">Professional Connection</a><a href="contact.html">Contact</a></nav><div class="foot-note">© 2026 SkillBridge · Policy documents are drafts pending legal review.</div></div></footer>
+<script>
+(function(){var b=document.getElementById("menuBtn"),p=document.getElementById("menuPanel");
+function s(o){p.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o));}
+b.addEventListener("click",function(e){e.stopPropagation();s(!p.classList.contains("open"));});
+document.addEventListener("click",function(e){if(!p.contains(e.target))s(false);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){s(false);b.focus();}});})();
+</script>
+<script>
+(function(){
+  var WA="https://wa.me/917350259870", MAIL="skillbridge.manavlab@gmail.com", SUBJ="Raw Leads request";
+  var F=document.getElementById("rawForm"), ST=document.getElementById("rawStatus");
+  var FIELDS=[{n:"name",req:true,kind:"text",label:"Full Name"},{n:"email",req:true,kind:"email",label:"Email"},{n:"category",req:true,kind:"text",label:"Industry / Business Category"},{n:"location",req:true,kind:"text",label:"Target Location"},{n:"count",req:true,kind:"number",label:"Number of leads required"},{n:"extra",req:false,kind:"text",label:"Additional requirements"}];
+  function v(n){ var el=F.elements[n]; if(!el) return ""; if(el.type==="checkbox") return el.checked?"Yes":"No"; return (el.value||"").replace(/\s+/g," ").trim().slice(0,1000); }
+  function setErr(n,m){ var e=document.getElementById("err-"+n); if(e) e.textContent=m||""; }
+  function valid(){
+    var ok=true;
+    FIELDS.forEach(function(f){
+      var val=v(f.n), m="";
+      if(f.req && !val) m="This field is required.";
+      if(!m && f.kind==="email" && val && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(val)) m="Please enter a valid email address.";
+      if(!m && f.kind==="number" && val && !(/^\d+$/.test(val) && +val>=1 && +val<=1000)) m="Enter a number between 1 and 1000.";
+      setErr(f.n,m); if(m) ok=false;
+    });
+    var c=F.elements.consent.checked; setErr("consent", c?"":"Please tick this box to continue."); if(!c) ok=false;
+    return ok;
+  }
+  function body(){
+    var lines=[SUBJ]; FIELDS.forEach(function(f){ lines.push(f.label+": "+(v(f.n)||"-")); });
+    lines.push("Consent to be contacted by email or WhatsApp: "+v("consent"));
+    lines.push(""); lines.push("Sent from the SkillBridge website. This is a request only. It is reviewed manually; nothing is confirmed until SkillBridge replies.");
+    return lines.join("\n");
+  }
+  document.getElementById("rawWa").addEventListener("click", function(){
+    if(!valid()){ ST.textContent="Please complete the required fields."; return; }
+    window.open(WA+"?text="+encodeURIComponent(body()),"_blank","noopener");
+    ST.textContent="WhatsApp is opening with your request. Press Send there to deliver it.";
+  });
+  document.getElementById("rawMail").addEventListener("click", function(){
+    if(!valid()){ ST.textContent="Please complete the required fields."; return; }
+    var a=document.createElement("a"); a.href="mailto:"+MAIL+"?subject="+encodeURIComponent(SUBJ)+"&body="+encodeURIComponent(body());
+    document.body.appendChild(a); a.click(); a.remove();
+    ST.textContent="Your email app is opening with your request. Press Send there to deliver it.";
+  });
+  var C=document.getElementById('rl-count'); function est(){ var n=parseInt(C.value,10); var E=document.getElementById('rl-est'); if(!n||n<1){E.textContent='Enter the number of leads to see the estimate.';return;} var billable=Math.max(0,n-10); var blocks=Math.ceil(billable/10); E.textContent='Estimated charge: ₹'+(blocks*99)+' for '+n+' leads. The first 10 Raw Leads are free, one time per customer/business (this estimate assumes this is your first free order). Then ₹99 per 10 Raw Leads. The final amount is confirmed before delivery.'; }C.addEventListener('input',est); est();
+})();
+</script>
+<div class="dw-flash" id="dwFlash" aria-hidden="true">
+  <div class="dw-diyas"><i class="dw-diya"></i><i class="dw-diya"></i><i class="dw-diya"></i><i class="dw-diya"></i><i class="dw-diya"></i></div>
+</div>
+<script>(function(){
+  var KEY='sb_cookie_consent', V=1, box=null, last=null;
+  function read(){ try{ var v=JSON.parse(localStorage.getItem(KEY)); if(v && v.version===V && (v.optional==='accepted'||v.optional==='rejected')) return v; }catch(e){} return null; }
+  function write(o){ try{ localStorage.setItem(KEY, JSON.stringify({version:V, essential:true, optional:o, savedAt:new Date().toISOString()})); }catch(e){} }
+  function notify(){ var ok=(read()||{}).optional==='accepted'; (window.__sbListeners||[]).forEach(function(cb){ try{cb(ok);}catch(e){} }); }
+  function hide(){ if(box) box.hidden=true; if(last){ last.focus(); last=null; } }
+  function build(){
+    var el=document.createElement('div'); el.className='sb-consent'; el.id='sbConsent';
+    el.setAttribute('role','region'); el.setAttribute('aria-labelledby','sbConsentTitle'); el.hidden=true;
+    el.innerHTML='<div class="sb-consent-inner"><button type="button" class="sb-consent-close" aria-label="Close" hidden>×</button>'+
+      '<div class="sb-consent-text"><h2 id="sbConsentTitle">Your Privacy Matters</h2>'+
+      '<p>We use cookies to help our website function properly, understand website usage, and improve your experience. You can accept or reject optional cookies at any time.</p>'+
+      '<p class="sb-consent-status" hidden></p></div>'+
+      '<div class="sb-consent-actions"><button type="button" class="sb-btn sb-btn-primary" data-act="accept">Accept</button>'+
+      '<button type="button" class="sb-btn sb-btn-outline" data-act="reject">Reject All</button>'+
+      '<a class="sb-btn sb-btn-link" href="cookie-policy.html">Cookie Policy</a></div></div>';
+    el.addEventListener('click', function(e){
+      var t=e.target.closest('[data-act]');
+      if(t){ write(t.getAttribute('data-act')==='accept' ? 'accepted' : 'rejected'); hide(); notify(); }
+      if(e.target.closest('.sb-consent-close')) hide();
+    });
+    document.body.appendChild(el); return el;
+  }
+  function show(reopened){
+    box = box || build();
+    var st = read();
+    box.querySelector('.sb-consent-close').hidden = !reopened;
+    var s = box.querySelector('.sb-consent-status');
+    s.hidden = !(reopened && st);
+    if (st) s.textContent = 'Current choice: optional cookies ' + st.optional + '. Essential storage is always on.';
+    box.hidden = false;
+    if (reopened) box.querySelector('[data-act="accept"]').focus();
+  }
+  window.SBConsent = {
+    get: read,
+    optionalAllowed: function(){ return (read()||{}).optional==='accepted'; },
+    onChange: function(cb){ (window.__sbListeners=window.__sbListeners||[]).push(cb); cb(window.SBConsent.optionalAllowed()); },
+    openPreferences: function(){ show(true); }
+  };
+  document.addEventListener('click', function(e){
+    var t=e.target.closest('[data-cookie-prefs]');
+    if (t){ e.preventDefault(); last=t; show(true); }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key==='Escape' && box && !box.hidden && !box.querySelector('.sb-consent-close').hidden) hide();
+  });
+  function start(){ if(!read()) show(false); notify(); }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();</script><!--SB-CONSENT-END-->
+<script src="assets/js/sb-motion.js" defer></script>
+</body>
+</html>

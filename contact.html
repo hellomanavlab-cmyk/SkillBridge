@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — SkillBridge</title>
+<meta name="description" content="Contact SkillBridge by email or WhatsApp. Contact SkillBridge by email or WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SkillBridge">
+<meta property="og:title" content="Contact — SkillBridge">
+<meta property="og:description" content="Contact SkillBridge by email or WhatsApp. Contact SkillBridge by email or WhatsApp.">
+<meta property="og:url" content="https://hellomanavlab-cmyk.github.io/SkillBridge/contact.html">
+<meta property="og:image" content="https://hellomanavlab-cmyk.github.io/SkillBridge/brand/logo-badge-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hellomanavlab-cmyk.github.io/SkillBridge/brand/logo-badge-512.png">
+<link rel="canonical" href="https://hellomanavlab-cmyk.github.io/SkillBridge/contact.html">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "SkillBridge", "url": "https://hellomanavlab-cmyk.github.io/SkillBridge/", "logo": "https://hellomanavlab-cmyk.github.io/SkillBridge/brand/logo-badge-512.png", "email": "skillbridge.manavlab@gmail.com", "description": "SkillBridge, powered by ManavLab: business discovery, suppliers, freelancers and public research leads for India."}</script>
+<link rel="stylesheet" href="assets/css/skillbridge-premium.css">
+</head>
+<body>
+<header class="top"><div class="hbar"><a href="index.html"><img src="media/skillbridge-logo.png" alt="SkillBridge logo, powered by ManavLab" width="40" height="40"><span><strong>SkillBridge</strong><small>Powered by ManavLab</small></span></a><button type="button" id="menuBtn" aria-expanded="false" aria-controls="menuPanel" aria-label="Open menu"><span></span><span></span><span></span></button></div><nav class="subnav" aria-label="Main"><a href="index.html" data-nav="index.html">Home</a><a href="raw-leads.html" data-nav="raw-leads.html">Raw Leads</a><a href="verified-research-leads.html" data-nav="verified-research-leads.html">Verified Leads</a></nav><div class="menu" id="menuPanel" role="menu"><a role="menuitem" href="about-founder.html">About Founder</a><a role="menuitem" href="about-skillbridge.html">About SkillBridge</a><a role="menuitem" href="manavlab.html">ManavLab</a><a role="menuitem" href="business-analysis.html">Business Analysis (Free)</a><a role="menuitem" href="professional-connection.html">Professional Connection (Free)</a><a role="menuitem" href="policies.html">Policies</a><a role="menuitem" href="contact.html">Contact</a></div></header>
+<main class="wrap">
+<section class="hero-s"><div class="kicker">Contact</div><h1>Contact SkillBridge</h1><p>Email: <a href="mailto:skillbridge.manavlab@gmail.com">skillbridge.manavlab@gmail.com</a><br>WhatsApp: <a href="https://wa.me/917350259870" target="_blank" rel="noopener noreferrer">+91 7350259870</a></p><p class="note"></p></section><form id="ctForm" class="block" novalidate><div class="grid2"><div><label for="f-name">Full name *</label><input id="f-name" name="name" type="text" maxlength="200"><span class="err" id="err-name"></span></div><div><label for="f-email">Email *</label><input id="f-email" name="email" type="email" maxlength="200"><span class="err" id="err-email"></span></div><div><label for="f-whatsapp">WhatsApp number (optional)</label><input id="f-whatsapp" name="whatsapp" type="tel" maxlength="200"><span class="err" id="err-whatsapp"></span></div><div><label for="f-topic">Topic *</label><input id="f-topic" name="topic" type="text" maxlength="200"><span class="err" id="err-topic"></span></div><div><label for="f-msg">Message *</label><textarea id="f-msg" name="msg" maxlength="800"></textarea><span class="err" id="err-msg"></span></div></div><label><input type="checkbox" name="privacy"> I agree that SkillBridge may use these details to respond to my request. *</label><span class="err" id="err-privacy"></span><div class="cta-row"><button class="btn" type="button" data-wa="1">Send on WhatsApp</button><button class="btn ghost" type="button" data-mail="1">Send by email</button></div><p class="status" role="status" aria-live="polite" id="st-ctForm"></p><p class="note">Preparing a message does not mean SkillBridge has received it. Press Send in WhatsApp or your email app to deliver it. Submitting a request does not by itself mean that a lead or a professional has been verified.</p></form><script>(function(){var f=document.getElementById("ctForm"),st=document.getElementById("st-ctForm");var REQ=["name","email","topic","msg"];function val(n){return sbV(f,n);}function check(){var ok=true;REQ.forEach(function(n){var m=val(n)?"":"This field is required.";if(!m&&n==="whatsapp"&&!sbPhoneOk(val(n)))m="Enter a valid WhatsApp number, for example +91 98765 43210.";if(!m&&n==="email"&&!sbEmailOk(val(n)))m="Please enter a valid email address.";sbErr(f,n,m);if(m)ok=false;});if(!f.elements.privacy.checked){document.getElementById("err-privacy").textContent="Please tick this box to continue.";ok=false;}else document.getElementById("err-privacy").textContent="";return ok;}function body(){var L=[];L.push("Full name: "+val("name")||"-");L.push("Email: "+val("email")||"-");L.push("WhatsApp number (optional): "+val("whatsapp")||"-");L.push("Topic: "+val("topic")||"-");L.push("Message: "+val("msg")||"-");return "Hello SkillBridge, I have a question.\n\n"+L.join("\n")+"\n\nPlease share the next steps.";}f.querySelector("[data-wa]").addEventListener("click",function(){if(!check()){st.textContent="Please fix the highlighted fields.";return;}sbSendWA(body());st.textContent="WhatsApp message is prepared. It has not been received until you press Send in WhatsApp.";});f.querySelector("[data-mail]").addEventListener("click",function(){if(!check()){st.textContent="Please fix the highlighted fields.";return;}sbSendMail("SkillBridge Contact Enquiry",body());st.textContent="Your email app is prepared. It has not been received until you press Send.";});f.addEventListener("submit",function(e){e.preventDefault();});})();</script>
+<section class="block" id="grievance" aria-labelledby="grievanceTitle"><h2 id="grievanceTitle">Grievance and privacy contact</h2><p>For privacy questions, data correction or deletion requests, and complaints, write to <a href="mailto:skillbridge.manavlab@gmail.com?subject=Privacy%20or%20grievance">skillbridge.manavlab@gmail.com</a>.</p><p><strong>Grievance officer:</strong> [OWNER TO CONFIRM: name and designation]</p><p class="note">We aim to acknowledge a complaint within a reasonable time. [OWNER TO CONFIRM: response time].</p></section>
+</main>
+<footer><div class="wrap"><div><strong>SkillBridge</strong> · Powered by ManavLab</div><nav class="footer-links" aria-label="Footer"><a href="policy-privacy.html">Privacy Policy</a><a href="policy-terms.html">Terms &amp; Conditions</a><a href="policies-guidelines.html">Policies &amp; Guidelines</a><a href="policy-refund.html">Refund &amp; Cancellation</a><a href="cookie-policy.html">Cookie Policy</a><a href="business-analysis.html">Business Analysis</a><a href="professional-connection.html">Professional Connection</a><a href="contact.html">Contact</a></nav><div class="foot-note">© 2026 SkillBridge · Policy documents are drafts pending legal review.</div></div></footer>
+<script>
+(function(){var b=document.getElementById("menuBtn"),p=document.getElementById("menuPanel");
+function s(o){p.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o));}
+b.addEventListener("click",function(e){e.stopPropagation();s(!p.classList.contains("open"));});
+document.addEventListener("click",function(e){if(!p.contains(e.target))s(false);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){s(false);b.focus();}});})();
+</script>
+<script>
+var SB_WA = "https://wa.me/917350259870", SB_MAIL = "skillbridge.manavlab@gmail.com";
+function sbV(form, n){ var el = form.elements[n]; if(!el) return ""; if(el.type==="checkbox") return el.checked ? "Yes" : "No"; return (el.value||"").replace(/\s+/g," ").trim().slice(0,800); }
+function sbErr(form, n, m){ var el = form.elements[n]; if(el) el.setAttribute("aria-invalid", m?"true":"false"); var e = document.getElementById("err-"+n); if(e) e.textContent = m||""; }
+function sbEmailOk(s){ return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s); }
+function sbPhoneOk(s){ return /^\+?[0-9 ()\-]{8,22}$/.test(s); }
+function sbSendWA(text){ window.open(SB_WA + "?text=" + encodeURIComponent(text), "_blank", "noopener"); }
+function sbSendMail(subject, text){ var a=document.createElement("a"); a.href="mailto:"+SB_MAIL+"?subject="+encodeURIComponent(subject)+"&body="+encodeURIComponent(text); document.body.appendChild(a); a.click(); a.remove(); }
+</script>
+<script src="assets/js/sb-motion.js" defer></script>
+<script>(function(){
+  var KEY='sb_cookie_consent', V=1, box=null, last=null;
+  function read(){ try{ var v=JSON.parse(localStorage.getItem(KEY)); if(v && v.version===V && (v.optional==='accepted'||v.optional==='rejected')) return v; }catch(e){} return null; }
+  function write(o){ try{ localStorage.setItem(KEY, JSON.stringify({version:V, essential:true, optional:o, savedAt:new Date().toISOString()})); }catch(e){} }
+  function notify(){ var ok=(read()||{}).optional==='accepted'; (window.__sbListeners||[]).forEach(function(cb){ try{cb(ok);}catch(e){} }); }
+  function hide(){ if(box) box.hidden=true; if(last){ last.focus(); last=null; } }
+  function build(){
+    var el=document.createElement('div'); el.className='sb-consent'; el.id='sbConsent';
+    el.setAttribute('role','region'); el.setAttribute('aria-labelledby','sbConsentTitle'); el.hidden=true;
+    el.innerHTML='<div class="sb-consent-inner"><button type="button" class="sb-consent-close" aria-label="Close" hidden>×</button>'+
+      '<div class="sb-consent-text"><h2 id="sbConsentTitle">Your Privacy Matters</h2>'+
+      '<p>We use cookies to help our website function properly, understand website usage, and improve your experience. You can accept or reject optional cookies at any time.</p>'+
+      '<p class="sb-consent-status" hidden></p></div>'+
+      '<div class="sb-consent-actions"><button type="button" class="sb-btn sb-btn-primary" data-act="accept">Accept</button>'+
+      '<button type="button" class="sb-btn sb-btn-outline" data-act="reject">Reject All</button>'+
+      '<a class="sb-btn sb-btn-link" href="cookie-policy.html">Cookie Policy</a></div></div>';
+    el.addEventListener('click', function(e){
+      var t=e.target.closest('[data-act]');
+      if(t){ write(t.getAttribute('data-act')==='accept' ? 'accepted' : 'rejected'); hide(); notify(); }
+      if(e.target.closest('.sb-consent-close')) hide();
+    });
+    document.body.appendChild(el); return el;
+  }
+  function show(reopened){
+    box = box || build();
+    var st = read();
+    box.querySelector('.sb-consent-close').hidden = !reopened;
+    var s = box.querySelector('.sb-consent-status');
+    s.hidden = !(reopened && st);
+    if (st) s.textContent = 'Current choice: optional cookies ' + st.optional + '. Essential storage is always on.';
+    box.hidden = false;
+    if (reopened) box.querySelector('[data-act="accept"]').focus();
+  }
+  window.SBConsent = {
+    get: read,
+    optionalAllowed: function(){ return (read()||{}).optional==='accepted'; },
+    onChange: function(cb){ (window.__sbListeners=window.__sbListeners||[]).push(cb); cb(window.SBConsent.optionalAllowed()); },
+    openPreferences: function(){ show(true); }
+  };
+  document.addEventListener('click', function(e){
+    var t=e.target.closest('[data-cookie-prefs]');
+    if (t){ e.preventDefault(); last=t; show(true); }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key==='Escape' && box && !box.hidden && !box.querySelector('.sb-consent-close').hidden) hide();
+  });
+  function start(){ if(!read()) show(false); notify(); }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();</script>
+</body>
+</html>

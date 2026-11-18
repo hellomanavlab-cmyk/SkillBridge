@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Page not found — SkillBridge</title>
+<meta name="description" content="This SkillBridge page could not be found.">
+<meta property="og:title" content="Page not found — SkillBridge">
+<meta property="og:description" content="This SkillBridge page could not be found.">
+<meta property="og:url" content="https://hellomanavlab-cmyk.github.io/SkillBridge/404.html">
+<meta property="og:image" content="https://hellomanavlab-cmyk.github.io/SkillBridge/brand/logo-badge-512.png">
+<link rel="canonical" href="https://hellomanavlab-cmyk.github.io/SkillBridge/404.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/skillbridge-premium.css">
+</head>
+<body>
+<header class="top"><div class="hbar"><a href="index.html"><img src="media/skillbridge-logo.png" alt="SkillBridge logo, powered by ManavLab" width="40" height="40"><span><strong>SkillBridge</strong><small>Powered by ManavLab</small></span></a><button type="button" id="menuBtn" aria-expanded="false" aria-controls="menuPanel" aria-label="Open menu"><span></span><span></span><span></span></button></div><nav class="subnav" aria-label="Main"><a href="index.html" data-nav="index.html">Home</a><a href="raw-leads.html" data-nav="raw-leads.html">Raw Leads</a><a href="verified-research-leads.html" data-nav="verified-research-leads.html">Verified Leads</a></nav><div class="menu" id="menuPanel" role="menu"><a role="menuitem" href="about-founder.html">About Founder</a><a role="menuitem" href="about-skillbridge.html">About SkillBridge</a><a role="menuitem" href="manavlab.html">ManavLab</a><a role="menuitem" href="business-analysis.html">Business Analysis (Free)</a><a role="menuitem" href="professional-connection.html">Professional Connection (Free)</a><a role="menuitem" href="policies.html">Policies</a><a role="menuitem" href="contact.html">Contact</a></div></header>
+<main class="wrap">
+<section class="hero"><div class="badge">Error 404</div><h1>We could not find that page</h1><p>The link may be old or mistyped.</p></section><div class="actions"><a class="btn" href="index.html">Home</a><a class="btn ghost" href="raw-leads.html">Raw Leads</a><a class="btn ghost" href="contact.html">Contact</a></div>
+</main>
+<footer><div class="wrap"><div><strong>SkillBridge</strong> · Powered by ManavLab</div><nav class="footer-links" aria-label="Footer"><a href="policy-privacy.html">Privacy Policy</a><a href="policy-terms.html">Terms &amp; Conditions</a><a href="policies-guidelines.html">Policies &amp; Guidelines</a><a href="policy-refund.html">Refund &amp; Cancellation</a><a href="cookie-policy.html">Cookie Policy</a><a href="business-analysis.html">Business Analysis</a><a href="professional-connection.html">Professional Connection</a><a href="contact.html">Contact</a></nav><div class="foot-note">© 2026 SkillBridge · Policy documents are drafts pending legal review.</div></div></footer>
+<script>
+(function(){var b=document.getElementById("menuBtn"),p=document.getElementById("menuPanel");
+function s(o){p.classList.toggle("open",o);b.setAttribute("aria-expanded",String(o));}
+b.addEventListener("click",function(e){e.stopPropagation();s(!p.classList.contains("open"));});
+document.addEventListener("click",function(e){if(!p.contains(e.target))s(false);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){s(false);b.focus();}});})();
+</script>
+
+<div class="dw-flash" id="dwFlash" aria-hidden="true">
+  <div class="dw-diyas"><i class="dw-diya"></i><i class="dw-diya"></i><i class="dw-diya"></i><i class="dw-diya"></i><i class="dw-diya"></i></div>
+</div>
+<script>(function(){
+  var KEY='sb_cookie_consent', V=1, box=null, last=null;
+  function read(){ try{ var v=JSON.parse(localStorage.getItem(KEY)); if(v && v.version===V && (v.optional==='accepted'||v.optional==='rejected')) return v; }catch(e){} return null; }
+  function write(o){ try{ localStorage.setItem(KEY, JSON.stringify({version:V, essential:true, optional:o, savedAt:new Date().toISOString()})); }catch(e){} }
+  function notify(){ var ok=(read()||{}).optional==='accepted'; (window.__sbListeners||[]).forEach(function(cb){ try{cb(ok);}catch(e){} }); }
+  function hide(){ if(box) box.hidden=true; if(last){ last.focus(); last=null; } }
+  function build(){
+    var el=document.createElement('div'); el.className='sb-consent'; el.id='sbConsent';
+    el.setAttribute('role','region'); el.setAttribute('aria-labelledby','sbConsentTitle'); el.hidden=true;
+    el.innerHTML='<div class="sb-consent-inner"><button type="button" class="sb-consent-close" aria-label="Close" hidden>×</button>'+
+      '<div class="sb-consent-text"><h2 id="sbConsentTitle">Your Privacy Matters</h2>'+
+      '<p>We use cookies to help our website function properly, understand website usage, and improve your experience. You can accept or reject optional cookies at any time.</p>'+
+      '<p class="sb-consent-status" hidden></p></div>'+
+      '<div class="sb-consent-actions"><button type="button" class="sb-btn sb-btn-primary" data-act="accept">Accept</button>'+
+      '<button type="button" class="sb-btn sb-btn-outline" data-act="reject">Reject All</button>'+
+      '<a class="sb-btn sb-btn-link" href="cookie-policy.html">Cookie Policy</a></div></div>';
+    el.addEventListener('click', function(e){
+      var t=e.target.closest('[data-act]');
+      if(t){ write(t.getAttribute('data-act')==='accept' ? 'accepted' : 'rejected'); hide(); notify(); }
+      if(e.target.closest('.sb-consent-close')) hide();
+    });
+    document.body.appendChild(el); return el;
+  }
+  function show(reopened){
+    box = box || build();
+    var st = read();
+    box.querySelector('.sb-consent-close').hidden = !reopened;
+    var s = box.querySelector('.sb-consent-status');
+    s.hidden = !(reopened && st);
+    if (st) s.textContent = 'Current choice: optional cookies ' + st.optional + '. Essential storage is always on.';
+    box.hidden = false;
+    if (reopened) box.querySelector('[data-act="accept"]').focus();
+  }
+  window.SBConsent = {
+    get: read,
+    optionalAllowed: function(){ return (read()||{}).optional==='accepted'; },
+    onChange: function(cb){ (window.__sbListeners=window.__sbListeners||[]).push(cb); cb(window.SBConsent.optionalAllowed()); },
+    openPreferences: function(){ show(true); }
+  };
+  document.addEventListener('click', function(e){
+    var t=e.target.closest('[data-cookie-prefs]');
+    if (t){ e.preventDefault(); last=t; show(true); }
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key==='Escape' && box && !box.hidden && !box.querySelector('.sb-consent-close').hidden) hide();
+  });
+  function start(){ if(!read()) show(false); notify(); }
+  if (document.readyState==='loading') document.addEventListener('DOMContentLoaded', start); else start();
+})();</script><!--SB-CONSENT-END-->
+<script src="assets/js/sb-motion.js" defer></script>
+</body>
+</html>
